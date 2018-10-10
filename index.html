@@ -69,7 +69,12 @@
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100%;
+}
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -124,7 +129,7 @@
                 <p>My research has spanned several areas: spectral clustering, homophonic substitution with a focus on
                     language generative model and variational inference for Bayesian non-parametrics. More details below</p>
                 <br>
-                <p>I am interested in scaling Bayesian Inference with Neural Network (Deep Bayesian Learning, not to be confused with Bayesian Deep Learning</p>
+                <p>I am interested in scaling Bayesian Inference with Neural Network (Deep Bayesian Learning, not to be confused with Bayesian Deep Learning)</p>
 
                 <br>
                 <a href="https://github.com/drproduck"><img src="image/github.svg" width=45px height=45px></a>
@@ -153,7 +158,7 @@
             <tr>
                 <td valign="top">
                     <a href="http://arxiv.org/abs/1806.07366">
-                        <img src="paper/lbdm/sc_bipartite_demo.png" width="300">
+                        <img src="paper/lbdm/sc_bipartite_demo.png"  width="300">
                     </a>
                 </td>
                 <td valign="top">
@@ -174,20 +179,40 @@
                     | <a href="https://github.com/drproduck/approximate-spectral-clustering">implementation</a>
                 </td>
             </tr>
+
+            <tr><td height="30px"></td></tr>
+
+            <tr>
+                <td valign="top">
+                    <a href="https://arxiv.org/abs/1809.02035">
+                        <img src="paper/evaluate/evaluate.png" width="300">
+                    </a>
+                </td>
+                <td valign="top">
+                    <b>Evaluating Syntactic Properties of Seq2seq Output with a Broad Coverage HPSG: A Case Study on Machine Translation</b>
+                    <p>
+                        Sequence to sequence (seq2seq) models are often employed in settings where the target output is natural language.
+                        However, the syntactic properties of the language generated from these models are not well understood.
+                        We explore whether such output belongs to a formal and realistic grammar, by employing the English Resource Grammar (ERG),
+                        a broad coverage, linguistically precise HPSG-based grammar of English. From a French to English parallel corpus,
+                        we analyze the parseability and grammatical constructions occurring in output from a seq2seq translation model.
+                        Over 93\% of the model translations are parseable, suggesting that it learns to generate conforming to a grammar.
+                        The model has trouble learning the distribution of rarer syntactic rules, and we pinpoint several constructions that differentiate translations between the references and our model.
+                    </p>
+                    <a href="https://johntzwei.github.io/">Johnny Wei</a>,
+                    <a href="./index.html" onclick="trackOutboundLink(this, 'outbound', 'Khiem Pham');">Khiem Pham</a>,
+                    <a href="http://brenocon.com/">Brendan O'Connor</a>,
+                    <a href="https://blogs.umass.edu/bwdillon/">Brian Dillon</a>.
+                    <br>
+                    <i>EMNLP 2018 Workshop on Analyzing and Interpreting Neural Networks for NLP,</i> Brussels, Belgium, October 2018
+                    <br>
+                    <a href="paper/evaluate/blackboxnlp_paper.pdf">paper</a>
+                    <!--| <a href="papers/node.bib">bibtex</a>-->
+                    <!--| <a href="paper/lbdm/lbdm_slide.pdf">slides</a>-->
+                    <!--| <a href="https://github.com/drproduck/approximate-spectral-clustering">implementation</a>-->
+                </td>
+            </tr>
             </table>
-            <!--<div class="row">-->
-                <!--<div class="col-lg-12">-->
-                    <!--<h1>Publications & Presentations</h1>-->
-                    <!--<p style="text-align: left; word-break: break-all;">-->
-                    <!--<b>Khiem Pham</b>, Guangliang Chen. <a href="pdfs/spectral.pdf">Large-scale Spectral Clustering using Diffusion Coordinates on Landmark-based Bipartite Graph.</a>-->
-                        <!--In the <i>NAACL-HLT 2018 12th Workshop on Graph-based Natural Language Processsing,</i> New Orleans, Louisiana, June 2018.-->
-                    <!--</p>-->
-		              <!--<p style="text-align: left; word-break: break-all;">-->
-                    <!--Johnny Tian-Zheng Wei, <b>Khiem Pham</b>, Brendan O'Connor and Brian Dillon. <a href="blackboxnlp_paper.pdf">Evaluating Syntactic Properties of Seq2seq Output with a Broad-->
-                          <!--Coverage HPSG: A Case Study on Machine Translation.</a> In the <i>EMNLP 2018 Workshop on Analyzing and Interpreting Neural Networks for NLP,</i> Brussels, Belgium, July 2018.-->
-                    <!--</p>-->
-                <!--</div>-->
-            <!--</div>-->
         </div>
     </section>
 
