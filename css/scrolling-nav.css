@@ -38,18 +38,22 @@ of those sections to manage the look and feel of the site. */
     background: #fff;
 }
 
-.about-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
-}
+/*.about-section {*/
+    /*height: 100%;*/
+    /*padding-top: 150px;*/
+    /*text-align: center;*/
+    /*background: #eee;*/
+/*}*/
 
 .services-section {
-    height: 100%;
+    /*height: 100%;*/
     padding-top: 150px;
-    text-align: center;
-    background: #fff;
+    /*text-align: center;*/
+    background: #ffffff;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100%;
 }
 
 .contact-section {
