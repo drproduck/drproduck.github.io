@@ -44,11 +44,42 @@ W_2 (G, P)
 $$
 
 
+
 Recently there have been some papers that used OT on OT: An OT-based distance is used as the ground metrics.  We first investigate the common components in these models.
 
-Hierarchical OT
 
-Multilevel Clustering
+
+###### Hierarchical OT
+
+Based on the topic modeling assumption, [7] proposed the following document (bag-of-words) distance:
+$$
+HOTT(d^1, d^2) = W (\sum_{k} d^1_k \delta_{t_k}, \sum_k d^2_k \delta_{t_k})
+$$
+where $t_k$ is the topic. the ground metric is $W(t_i, t_j)$ i.e. word-mover distance. The main advantage is that the ground metric can be pre-computed, an # topics x # topics matrix.
+
+
+
+###### Multilevel Clustering
+
+
+
+###### Multilevel Clustering with Global Sharing of Atoms
+
+$$
+\inf_{G_j, H_k} \sum_{j=1}^m  W(P_j, G_j) + \frac{1}{m} \min_k W (G_j, H_k)
+$$
+
+1. For each k, Find $G_j$ that minimizes $W(P_j, G_j) + \frac{1}{m} W(G_j, H_k)$ using barycenter computation. Call this index $k_j$
+
+2. For a mini-batch setting,we need to minimize
+   $$
+   \inf \sum_{j=1}^m W(P_j, G_j) + \frac{1}{m} W(G_j, H_{k_j})
+   $$
+   We update $H_{k_j}$ by gradient descent.
+
+3.  
+
+
 
 Hierarchical OT for Multimodal Distribution Alignment
 
@@ -67,3 +98,5 @@ Hierarchical OT for Multimodal Distribution Alignment
 [5]: Distilled wasserstein learning for word embedding and topic modeling
 
 [6]: Wasserstein k-means++ for cloud regime histogram clustering
+
+[7]: Hierarchical Optimal Transport for Document Representation
